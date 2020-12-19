@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Liveliness Detection</title>
+    <script>    
+        window.setTimeout(function(){
+   
+          // Move to a new location or you can do something else
+          window.location.href = "http://localhost:5000/certificate";
+   
+          }, 30000);
+   
+    </script>
+   
+</head>
+<body>
+    <h1 align="center">Face Recognition</h1>
+    <img align="center" id="video" style="height: 50%;width: 50%;" src="{{ url_for('video_viewer') }}">
+</body>
+</html>

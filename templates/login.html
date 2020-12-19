@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <div style="display:flex;flex-direction: column;justify-content: left;">
+        <h1 align="left">Please fill in the details</h1>
+        <div style="align-self: left;display:flex;flex-direction:column">
+            <form action="http://localhost:5000/login-user" method="POST" enctype="multipart/form-data">
+                <p align="left">Name <input type="text" name="Name" placeholder="John Doe" required /></p>
+                <p align="left">Aadhar Number <input type="text" name="Aadhar" placeholder="0123-4567-8901" required />
+                </p>
+                <p align="left"><input type="submit" value="SUBMIT" /></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

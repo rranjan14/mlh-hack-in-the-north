@@ -209,11 +209,11 @@ def video_to_images(model_detector, dir, name, one_image_only=False):
 
 
 def run(cam_index, cam_resolution, name):
-#    detector=FaceDetectorModels.HAARCASCADE
+    detector=FaceDetectorModels.HAARCASCADE
 #    detector=FaceDetectorModels.DLIBHOG
 #    detector=FaceDetectorModels.DLIBCNN
 #    detector=FaceDetectorModels.SSDRESNET
-    detector=FaceDetectorModels.MTCNN
+    #detector=FaceDetectorModels.MTCNN
 #    detector=FaceDetectorModels.FACENET
 
     process_faceenrollment(detector, cam_index, cam_resolution)

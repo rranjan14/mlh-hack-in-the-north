@@ -91,6 +91,7 @@ def process_livenessdetection(model_detector, model_recognizer, model_liveness, 
         # Initialize face liveness detection
         face_liveness  = FaceLiveness(model=FaceLivenessModels.EYESBLINK_MOUTHOPEN, path=INPUT_DIR_MODEL_LIVENESS)
         face_liveness2 = FaceLiveness(model=FaceLivenessModels.COLORSPACE_YCRCBLUV, path=INPUT_DIR_MODEL_LIVENESS)
+        print("whats happening")
 
     except:
         print("Error, check if models and trained dataset models exists!")
@@ -101,7 +102,7 @@ def process_livenessdetection(model_detector, model_recognizer, model_liveness, 
     eyes_close, eyes_ratio = (False, 0)
     total_eye_blinks, eye_counter, eye_continuous_close = (0, 0, 1) # eye_continuous_close should depend on frame rate
     mouth_open, mouth_ratio = (False, 0)
-    total_mouth_opens, mouth_counter, mouth_continuous_open = (0, 0, 1) # eye_continuous_close should depend on frame rate
+    total_mouth_opens, mouth_counter, mouth_continuous_open = (0, 0, 1) # mouth_continuous_close should depend on frame rate
 
     time_start = time()
     time_elapsed = 0
@@ -134,7 +135,7 @@ def process_livenessdetection(model_detector, model_recognizer, model_liveness, 
 
             # Detect if frame is a print attack or replay attack based on colorspace
             is_fake_print  = face_liveness2.is_fake(frame, face)
-            #is_fake_replay = face_liveness2.is_fake(frame, face, flag=1)
+            is_fake_replay = face_liveness2.is_fake(frame, face, flag=1)
 
             # Identify face only if it is not fake and eyes are open and mouth is close
             if is_fake_print:
