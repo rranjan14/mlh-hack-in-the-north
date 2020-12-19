@@ -1,1 +1,1 @@
-# mlh-hack-in-the-north-backend
+# mlh-hack-in-the-north
