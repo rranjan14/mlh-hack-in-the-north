@@ -7,6 +7,8 @@
     This is a flask app which takes data like name and aadhar number and an image on registration and trains the model.On login, the user simply has to put name and aadhar and then continue to liveness detector which uses the webcam to feed in the data and predict.
 </p>
 
+<p><b>testing_webcam_flask.py is the flask app. Please use that to set your environment variable to run it and the flask environemnt should be development.</b></p>
+
 
 
 
